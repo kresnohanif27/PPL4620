@@ -10,3 +10,9 @@ Anggota :
 
 Nama Proyek : 
 Penerapan Game Katalog di MAKEH Record
+
+Tools: 
+1. Project Mangement: Asana   
+2. Diagram: Draw.io
+3. Wireframe: Figma  
+4. UI Mockup: Figma
