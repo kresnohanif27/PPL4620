@@ -19,8 +19,17 @@ Nama Proyek :
 Penerapan Game Katalog di MAKEH Record
 
 Tools: 
-1. Project Mangement : Asana   
-2. Diagram : Draw.io
-3. Wireframe : Figma  
-4. UI : Figma
-5. Mockup : Adobe Photoshop
+1. Project Mangement	: Asana   
+2. Diagram		: Draw.io
+3. Wireframe		: Figma  
+4. UI			: Figma
+5. Mockup		: Adobe Photoshop
+
+Role :
+- Project Leader		: Kresno Akmal Hanif
+- Business & System Analyst	: Alif Syaha Pristyan P.K
+- Database Designer		: Ericsson Dhimas Niagara 
+- UI Designer			: Rizki Fadhol Ardafa 
+- Front-End Programmer		: Manuel Setyo Saputro Sriwibowo
+- Back-End Programmer		: Manuel Setyo Saputro Sriwibowo
+
