@@ -34,5 +34,5 @@ Role :
 - Back-End Programmer		: Manuel Setyo Saputro Sriwibowo
 
 Presentasi Demo Aplikasi :
-#1. Home - https://youtu.be/HmqodxV4dQE
-#2. cooming soon
+1. Home - https://youtu.be/HmqodxV4dQE
+2. cooming soon
