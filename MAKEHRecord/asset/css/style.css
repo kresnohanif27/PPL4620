@@ -144,3 +144,27 @@
 .text-player-2 {
     font-size: 16px;
 }
+
+.card-body a {
+    text-decoration: none;
+}
+
+.col-lg-6 .card {
+    border: 0;
+}
+
+.page-link {
+    background-color: #ec407a;
+    color: #fff;
+    border: 0;
+}
+
+.page-item.disabled .page-link {
+    background-color: #ec407a;
+    color: #fff;
+}
+
+.page-item.active .page-link {
+    background-color: #ec4079dd;
+    color: #fff;
+}
