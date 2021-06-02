@@ -35,4 +35,4 @@ Role :
 
 Presentasi Demo Aplikasi :
 1. Home - https://youtu.be/HmqodxV4dQE
-2. cooming soon
+2. News - https://youtu.be/yyMlLEvoUhw
