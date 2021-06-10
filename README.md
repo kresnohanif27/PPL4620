@@ -36,4 +36,5 @@ Role :
 Presentasi Demo Aplikasi :
 1. Home - https://youtu.be/HmqodxV4dQE
 2. News - https://youtu.be/yyMlLEvoUhw
-3. Cooming soon
+3. Login / Register - https://youtu.be/Rmv8Ft1LTHg
+4. Cooming soon
