@@ -1,0 +1,654 @@
+.sina-hover-image-effect img {
+	display: inline-block;
+}
+.sina-hover-image {
+	position: relative;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/*--------------------------------- General -------------------------------------- */
+.sina-hover-image-linkable{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.sina-hover-image-effect {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+}
+.sina-hover-image-effect img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	transition: all 0.35s;
+}
+.sina-hover-image-inner {
+	padding: 2em;
+	backface-visibility: hidden;
+}
+.sina-hover-image-inner::before,
+.sina-hover-image-inner::after {
+	pointer-events: none;
+}
+.sina-hover-image-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.sina-hover-image-effect h3 {
+	word-spacing: -0.1em;
+}
+.sina-hover-image-effect h3{
+	margin: 0;
+}
+
+/*--------------------------------- Lily -------------------------------------- */
+.sina-effect-lily img {
+	max-width: none;
+	width: calc(100% + 50px);
+	transform: translate3d(-40px,0,0);
+}
+.sina-effect-lily .sina-hover-image-inner {
+	text-align: left;
+}
+.sina-effect-lily .sina-hover-image-inner > .sina-hover-image-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2em;
+	width: 100%;
+	height: 50%;
+}
+.sina-effect-lily h3,
+.sina-effect-lily .sina-hover-image-desc {
+	transform: translate3d(0,40px,0);
+}
+.sina-effect-lily h3 {
+	transition: transform 0.35s;
+}
+.sina-effect-lily .sina-hover-image-desc {
+	transition: opacity 0.2s, transform 0.35s;
+}
+.sina-effect-lily:hover img,
+.sina-effect-lily:hover h3,
+.sina-effect-lily:hover .sina-hover-image-desc {
+	transform: translate3d(0,0,0);
+}
+.sina-effect-lily:hover .sina-hover-image-desc {
+	transition-delay: 0.05s;
+	transition-duration: 0.35s;
+}
+
+/*--------------------------------- Sadie -------------------------------------- */
+.sina-effect-sadie .sina-hover-image-inner::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	opacity: 0;
+	background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+	transform: translate3d(0,50%,0);
+}
+.sina-effect-sadie h3 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	transform: translate3d(0,-50%,0);
+	transition: transform 0.35s, color 0.35s;
+}
+.sina-effect-sadie .sina-hover-image-inner::before,
+.sina-effect-sadie .sina-hover-image-desc{
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-sadie .sina-hover-image-desc{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2em;
+	width: 100%;
+	transform: translate3d(0,10px,0);
+}
+.sina-effect-sadie:hover h3 {
+	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+.sina-effect-sadie:hover .sina-hover-image-inner::before ,
+.sina-effect-sadie:hover .sina-hover-image-desc{
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+/*--------------------------------- Roxy -------------------------------------- */
+.sina-effect-roxy {
+	background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
+}
+.sina-effect-roxy img {
+	max-width: none;
+	width: calc(100% + 60px);
+	transform: translate3d(-50px,0,0);
+}
+.sina-effect-roxy .sina-hover-image-inner::before {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	border: 1px solid #fff;
+	content: '';
+	opacity: 0;
+	transform: translate3d(-20px,0,0);
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-roxy .sina-hover-image-inner {
+	padding: 3em;
+	text-align: left;
+}
+.sina-effect-roxy h3 {
+	padding: 30% 0 10px 0;
+}
+.sina-effect-roxy .sina-hover-image-desc{
+	transform: translate3d(-10px,0,0);
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-roxy:hover img {
+	transform: translate3d(0,0,0);
+}
+.sina-effect-roxy:hover .sina-hover-image-inner::before,
+.sina-effect-roxy:hover .sina-hover-image-desc{
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+/*--------------------------------- Budda -------------------------------------- */
+.sina-effect-bubba {
+	background: #9e5406;
+}
+.sina-effect-bubba .sina-hover-image-inner::before,
+.sina-effect-bubba .sina-hover-image-inner::after {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	content: '';
+	opacity: 0;
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-bubba .sina-hover-image-inner::before {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	transform: scale(0,1);
+}
+.sina-effect-bubba .sina-hover-image-inner::after {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	transform: scale(1,0);
+}
+.sina-effect-bubba h3 {
+	padding-top: 30%;
+	transform: translate3d(0,-20px,0);
+	transition: transform 0.35s;
+}
+.sina-effect-bubba .sina-hover-image-desc{
+	padding: 20px 2.5em;
+	transform: translate3d(0,20px,0);
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-bubba:hover .sina-hover-image-inner::before,
+.sina-effect-bubba:hover .sina-hover-image-inner::after {
+	opacity: 1;
+	transform: scale(1);
+}
+.sina-effect-bubba:hover h3,
+.sina-effect-bubba:hover .sina-hover-image-desc{
+	transform: translate3d(0,0,0);
+}
+
+/*--------------------------------- Romeo -------------------------------------- */
+.sina-effect-romeo {
+	perspective: 1000px;
+}
+.sina-effect-romeo img {
+	transform: translate3d(0,0,300px);
+}
+.sina-effect-romeo:hover img {
+	transform: translate3d(0,0,0);
+}
+.sina-effect-romeo .sina-hover-image-inner::before,
+.sina-effect-romeo .sina-hover-image-inner::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	height: 1px;
+	content: '';
+	background: #fff;
+	transform: translate3d(-50%,-50%,0);
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-romeo:hover .sina-hover-image-inner::before {
+	opacity: 0.5;
+	transform: translate3d(-50%,-50%,0) rotate(45deg);
+}
+.sina-effect-romeo:hover .sina-hover-image-inner::after {
+	opacity: 0.5;
+	transform: translate3d(-50%,-50%,0) rotate(-45deg);
+}
+.sina-effect-romeo h3,
+.sina-effect-romeo .sina-hover-image-desc{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	transition: transform 0.35s;
+}
+.sina-effect-romeo h3 {
+	transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
+}
+.sina-effect-romeo .sina-hover-image-desc{
+	padding: 0.25em 2em;
+	transform: translate3d(0,-50%,0) translate3d(0,150%,0);
+}
+.sina-effect-romeo:hover h3 {
+	transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
+}
+.sina-effect-romeo:hover .sina-hover-image-desc{
+	transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+}
+
+/*--------------------------------- Layla -------------------------------------- */
+.sina-effect-layla .sina-hover-image-inner {
+	padding: 3em;
+}
+.sina-effect-layla .sina-hover-image-inner::before,
+.sina-effect-layla .sina-hover-image-inner::after {
+	position: absolute;
+	content: '';
+	opacity: 0;
+}
+.sina-effect-layla .sina-hover-image-inner::before {
+	top: 50px;
+	right: 30px;
+	bottom: 50px;
+	left: 30px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	transform: scale(0,1);
+	transform-origin: 0 0;
+}
+.sina-effect-layla .sina-hover-image-inner::after {
+	top: 30px;
+	right: 50px;
+	bottom: 30px;
+	left: 50px;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	transform: scale(1,0);
+	transform-origin: 100% 0;
+}
+.sina-effect-layla h3 {
+	padding-top: 26%;
+	transition: transform 0.35s;
+}
+.sina-effect-layla .sina-hover-image-desc{
+	padding: 0.5em 2em;
+	text-transform: none;
+	transform: translate3d(0,-10px,0);
+}
+.sina-effect-layla img {
+	transform: translate3d(0,-30px,0) scale(1.15, 1.15);
+}
+.sina-effect-layla h3 {
+	transform: translate3d(0,-30px,0);
+}
+.sina-effect-layla .sina-hover-image-inner::before,
+.sina-effect-layla .sina-hover-image-inner::after,
+.sina-effect-layla .sina-hover-image-desc{
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-layla:hover img {
+	transform: translate3d(0,0,0) scale(1.15, 1.15);
+}
+.sina-effect-layla:hover .sina-hover-image-inner::before,
+.sina-effect-layla:hover .sina-hover-image-inner::after {
+	opacity: 1;
+	transform: scale(1);
+}
+.sina-effect-layla:hover h3,
+.sina-effect-layla:hover .sina-hover-image-desc{
+	transform: translate3d(0,0,0);
+}
+.sina-effect-layla:hover .sina-hover-image-inner::after,
+.sina-effect-layla:hover h3,
+.sina-effect-layla:hover p,
+.sina-effect-layla:hover img {
+	transition-delay: 0.15s;
+}
+
+/*--------------------------------- Honey -------------------------------------- */
+.sina-effect-honey {
+	background: #4a3753;
+}
+.sina-effect-honey .sina-hover-image-inner::before {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	content: '';
+	background: #4b00e7;
+	transform: translate3d(0,10px,0);
+}
+.sina-effect-honey h3 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 1em 1.5em 1.8em;
+	width: 100%;
+	text-align: left;
+	transform: translate3d(0,-30px,0);
+}
+.sina-effect-honey h3 small {
+	display: block;
+	word-spacing: 0;
+	transform: translate3d(0,-30px,0);
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-honey .sina-hover-image-inner::before,
+.sina-effect-honey h3 {
+	transition: transform 0.35s;
+}
+.sina-effect-honey:hover .sina-hover-image-inner::before,
+.sina-effect-honey:hover h3,
+.sina-effect-honey:hover h3 small {
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+/*--------------------------------- Oscar -------------------------------------- */
+.sina-effect-oscar {
+	background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
+}
+.sina-effect-oscar .sina-hover-image-inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3em;
+	background-color: rgba(58,52,42,0.7);
+	transition: background-color 0.35s;
+}
+.sina-effect-oscar .sina-hover-image-inner::before {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	border: 1px solid #fff;
+	content: '';
+}
+.sina-effect-oscar h3 {
+	margin: 20% 0 10px 0;
+	transform: translate3d(0,100%,0);
+	transition: transform 0.35s;
+}
+.sina-effect-oscar .sina-hover-image-inner::before,
+.sina-effect-oscar .sina-hover-image-desc{
+	opacity: 0;
+	transform: scale(0);
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-oscar:hover h3 {
+	transform: translate3d(0,0,0);
+}
+.sina-effect-oscar:hover .sina-hover-image-inner::before,
+.sina-effect-oscar:hover .sina-hover-image-desc{
+	opacity: 1;
+	transform: scale(1);
+}
+.sina-effect-oscar:hover .sina-hover-image-inner {
+	background-color: rgba(58,52,42,0);
+}
+
+/*--------------------------------- Marley -------------------------------------- */
+.sina-effect-marley .sina-hover-image-inner {
+	text-align: right;
+}
+.sina-effect-marley h3,
+.sina-effect-marley .sina-hover-image-desc{
+	position: absolute;
+	right: 30px;
+	left: 30px;
+	padding: 10px 0;
+}
+.sina-effect-marley .sina-hover-image-desc{
+	bottom: 30px;
+	line-height: 1.5;
+	transform: translate3d(0,100%,0);
+}
+.sina-effect-marley h3 {
+	top: 30px;
+	transform: translate3d(0,20px,0);
+	transition: transform 0.35s;
+}
+.sina-effect-marley:hover h3 {
+	transform: translate3d(0,0,0);
+}
+.sina-effect-marley h3::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	content: '';
+	background: #fff;
+	transform: translate3d(0,40px,0);
+}
+.sina-effect-marley h3::after,
+.sina-effect-marley .sina-hover-image-desc{
+	opacity: 0;
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-marley:hover h3::after,
+.sina-effect-marley:hover .sina-hover-image-desc{
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+/*--------------------------------- Ruby -------------------------------------- */
+.sina-effect-ruby {
+	background-color: #17819c;
+}
+.sina-effect-ruby img {
+	transform: scale(1.15);
+}
+.sina-effect-ruby:hover img {
+	transform: scale(1);
+}
+.sina-effect-ruby h3 {
+	margin-top: 20%;
+	transform: translate3d(0,20px,0);
+	transition: transform 0.35s;
+}
+.sina-effect-ruby .sina-hover-image-desc{
+	margin: 1em 0 0;
+	padding: 3em;
+	border: 1px solid #fff;
+	transform: translate3d(0,20px,0) scale(1.1);
+	transition: opacity 0.35s, transform 0.35s;
+} 
+.sina-effect-ruby:hover h3 {
+	transform: translate3d(0,0,0);
+}
+.sina-effect-ruby:hover .sina-hover-image-desc{
+	transform: translate3d(0,0,0) scale(1);
+}
+
+/*--------------------------------- Milo -------------------------------------- */
+.sina-effect-milo {
+	background: #2e5d5a;
+}
+.sina-effect-milo img {
+	max-width: none;
+	width: calc(100% + 60px);
+	opacity: 1;
+	backface-visibility: hidden;
+	transform: translate3d(-30px,0,0) scale(1.12);
+}
+.sina-effect-milo:hover img {
+	transform: translate3d(0,0,0) scale(1);
+}
+.sina-effect-milo h3 {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 1em 1.2em;
+}
+.sina-effect-milo .sina-hover-image-desc{
+	padding: 0 10px 0 0;
+	width: 50%;
+	border-right: 1px solid #fff;
+	text-align: right;
+	transform: translate3d(-40px,0,0);
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-milo:hover .sina-hover-image-desc{
+	transform: translate3d(0,0,0);
+}
+
+/*--------------------------------- Dexter -------------------------------------- */
+.sina-effect-dexter {
+	background: linear-gradient(to bottom, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%); 
+}
+.sina-effect-dexter .sina-hover-image-inner::after {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	height: calc(50% - 30px);
+	border: 5px solid #fff;
+	content: '';
+	transform: translate3d(0,-100%,0);
+	transition: transform 0.35s;
+}
+.sina-effect-dexter:hover .sina-hover-image-inner::after {
+	transform: translate3d(0,0,0);
+}
+.sina-effect-dexter .sina-hover-image-inner {
+	padding: 3em;
+	text-align: left;
+}
+.sina-effect-dexter .sina-hover-image-desc{
+	position: absolute;
+	right: 60px;
+	bottom: 60px;
+	left: 60px;
+	transform: translate3d(0,-100px,0);
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-dexter:hover .sina-hover-image-desc{
+	transform: translate3d(0,0,0);
+}
+
+/*--------------------------------- Sarah -------------------------------------- */
+.sina-effect-sarah {
+	background: #42b078;
+}
+.sina-effect-sarah img {
+	max-width: none;
+	width: calc(100% + 20px);
+	backface-visibility: hidden;
+	transform: translate3d(-10px,0,0);
+}
+.sina-effect-sarah:hover img {
+	transform: translate3d(0,0,0);
+}
+.sina-effect-sarah .sina-hover-image-inner {
+	text-align: left;
+}
+.sina-effect-sarah h3 {
+	position: relative;
+	padding: 0.5em 0;
+	overflow: hidden;
+}
+.sina-effect-sarah h3::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	content: '';
+	background: #fff;
+	transform: translate3d(-100%,0,0);
+	transition: transform 0.35s;
+}
+.sina-effect-sarah:hover h3::after {
+	transform: translate3d(0,0,0);
+}
+.sina-effect-sarah .sina-hover-image-desc{
+	padding: 1em 0;
+	transform: translate3d(100%,0,0);
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-sarah:hover .sina-hover-image-desc{
+	transform: translate3d(0,0,0);
+}
+
+/*--------------------------------- Chico -------------------------------------- */
+.sina-effect-chico img {
+	transform: scale(1.12);
+}
+.sina-effect-chico:hover img {
+	transform: scale(1);
+}
+.sina-effect-chico .sina-hover-image-inner {
+	padding: 3em;
+}
+.sina-effect-chico .sina-hover-image-inner::before {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	border: 1px solid #fff;
+	content: '';
+	transform: scale(1.1);
+}
+.sina-effect-chico .sina-hover-image-inner::before,
+.sina-effect-chico .sina-hover-image-desc{
+	opacity: 0;
+	transition: opacity 0.35s, transform 0.35s;
+}
+.sina-effect-chico h3 {
+	padding: 20% 0 20px 0;
+}
+.sina-effect-chico .sina-hover-image-desc{
+	margin: 0 auto;
+	transform: scale(1.5);
+}
+.sina-effect-chico:hover .sina-hover-image-inner::before,
+.sina-effect-chico:hover .sina-hover-image-desc{
+	opacity: 1;
+	transform: scale(1);
+}
+
+
+/* RESPONSIVE-Mobile*/
+@media (max-width: 767px) {
+	.sina-hover-image-desc{
+		display: none;
+	}
+}
