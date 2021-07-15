@@ -1,0 +1,67 @@
+/* --------------------------------- General -------------------------------------- */
+.rtl .sina-hover-image-effect{
+	float: right;
+}
+
+/*--------------------------------- Lily -------------------------------------- */
+.rtl .sina-effect-lily img{
+	transform: translate3d(40px,0,0);
+}
+
+/* --------------------------------- Roxy -------------------------------------- */
+.rtl .sina-effect-roxy img{
+	transform: translate3d(50px,0,0);
+}
+
+/* --------------------------------- Milo -------------------------------------- */
+.rtl .sina-effect-milo img{
+	transform: translate3d(30px,0,0) scale(1.12);
+}
+.rtl .sina-effect-milo:hover img {
+	transform: translate3d(0,0,0) scale(1);
+}
+.sina-effect-milo h3{
+	right: auto;
+	left: 0;
+}
+.rtl .sina-effect-milo .sina-hover-image-desc{
+	padding: 0 0 0 10px;
+	border-right: 0;
+	border-left: 1px solid #fff;
+	text-align: left;
+}
+
+/*--------------------------------- Marley -------------------------------------- */
+.rtl .sina-effect-marley .sina-hover-image-inner{
+	text-align: left;
+}
+
+/*--------------------------------- Sarah -------------------------------------- */
+.rtl .sina-effect-sarah img{
+	transform: translate3d(10px,0,0);
+}
+.rtl .sina-effect-sarah h3::after{
+	left: auto;
+	right: 0;
+	transform: translate3d(100%,0,0);
+}
+.rtl .sina-effect-sarah .sina-hover-image-desc{
+	transform: translate3d(-100%,0,0);
+}
+
+/*--------------------------------- Common -------------------------------------- */
+.rtl .sina-effect-honey h3,
+.rtl .sina-effect-dexter .sina-hover-image-inner,
+.rtl .sina-effect-sarah .sina-hover-image-inner,
+.rtl .sina-effect-roxy .sina-hover-image-inner,
+.rtl .sina-effect-lily .sina-hover-image-inner{
+	text-align: right;
+}
+
+.rtl .sina-effect-sarah:hover .sina-hover-image-desc,
+.rtl .sina-effect-sarah:hover h3::after,
+.rtl .sina-effect-sarah:hover img,
+.rtl .sina-effect-roxy:hover img,
+.rtl .sina-effect-lily:hover img{
+	transform: translate3d(0,0,0);
+}
