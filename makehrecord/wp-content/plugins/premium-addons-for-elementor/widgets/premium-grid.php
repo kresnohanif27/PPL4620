@@ -2656,9 +2656,10 @@ class Premium_Grid extends Widget_Base {
 				<div class="pa-gallery-img <?php echo esc_attr( $skin ); ?>" onclick="">
 					<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'image_container' ) ); ?>>
 						<?php
-							$video_link = $this->render_grid_item( $image, $index );
+							$video_data = $this->render_grid_item( $image, $index );
 
-							$image['video_link'] = $video_link;
+							$image['video_link']  = $video_data['link'];
+							$image['video_thumb'] = $video_data['thumbnail'];
 						if ( 'style3' === $skin ) :
 							?>
 							<div class="pa-gallery-icons-wrapper">
@@ -2737,7 +2738,7 @@ class Premium_Grid extends Widget_Base {
 									$lightbox_key,
 									array(
 										'data-elementor-open-lightbox'      => $lightbox_type,
-										'data-elementor-lightbox-slideshow' => count( $settings['premium_gallery_img_content'] ) > 1 ?  $this->get_id() : false,
+										'data-elementor-lightbox-slideshow' => count( $settings['premium_gallery_img_content'] ) > 1 ? $this->get_id() : false,
 									)
 								);
 
@@ -2825,7 +2826,8 @@ class Premium_Grid extends Widget_Base {
 
 		$settings = $this->get_settings();
 
-		$image_id = attachment_url_to_postid( $item['premium_gallery_img']['url'] );
+		$image_src = $item['premium_gallery_img']['url'];
+		$image_id  = attachment_url_to_postid( $image_src );
 
 		$settings['image_data'] = Helper_Functions::get_image_data( $image_id, $item['premium_gallery_img']['url'], $settings['thumbnail_size'] );
 
@@ -2888,7 +2890,10 @@ class Premium_Grid extends Widget_Base {
 		<?php echo $image_html; ?>
 		<?php
 
-		return ( isset( $link ) && ! empty( $link ) ) ? $link : false;
+		return array(
+			'link'      => ( isset( $link ) && ! empty( $link ) ) ? $link : false,
+			'thumbnail' => $image_src,
+		);
 	}
 
 	/**
@@ -2936,15 +2941,15 @@ class Premium_Grid extends Widget_Base {
 
 			if ( 'yes' === $lightbox ) {
 
-				$lightbox_options = array(
-					'type'         => 'video',
-					'videoType'    => $item['premium_gallery_video_type'],
-					'url'          => $item['video_link'],
-					'modalOptions' => array(
-						'id'               => 'elementor-lightbox-' . $id,
-						'videoAspectRatio' => '169',
-					),
-				);
+				// $lightbox_options = array(
+				// 'type'      => 'video',
+				// 'videoType' => $item['premium_gallery_video_type'],
+				// 'url'       => $item['video_link'],
+				// 'modalOptions' => array(
+				// 'id'               => 'elementor-lightbox-' . $id,
+				// 'videoAspectRatio' => '169',
+				// ),
+				// );
 
 				if ( 'hosted' === $type ) {
 					$lightbox_options['videoParams'] = $this->get_hosted_params( $item );
@@ -2953,16 +2958,19 @@ class Premium_Grid extends Widget_Base {
 				$this->add_render_attribute(
 					$lightbox_key,
 					array(
-						'data-elementor-open-lightbox' => 'yes',
-						'data-elementor-lightbox'      => wp_json_encode( $lightbox_options ),
+						'data-elementor-open-lightbox'  => 'yes',
+						// 'data-elementor-lightbox'       => wp_json_encode( $lightbox_options ),
+						'data-elementor-lightbox-slideshow' => count( $settings['premium_gallery_img_content'] ) > 1 ? $this->get_id() : false,
+						'href'                          => $item['video_thumb'],
+						'data-elementor-lightbox-video' => $item['video_link'],
 					)
 				);
 
 			}
 
 			?>
-			<div <?php echo wp_kses_post( $this->get_render_attribute_string( $lightbox_key ) ); ?>>
-				<a class="pa-gallery-magnific-image pa-gallery-video-icon">
+			<div>
+				<a class="pa-gallery-magnific-image pa-gallery-video-icon" <?php echo wp_kses_post( $this->get_render_attribute_string( $lightbox_key ) ); ?>>
 					<span>
 						<?php
 						Icons_Manager::render_icon( $settings['premium_gallery_videos_icon'], array( 'aria-hidden' => 'true' ) );
@@ -2993,7 +3001,7 @@ class Premium_Grid extends Widget_Base {
 						$lightbox_key,
 						array(
 							'data-elementor-open-lightbox' => $lightbox_type,
-							'data-elementor-lightbox-slideshow' => count( $settings['premium_gallery_img_content'] ) > 1 ?  $id : false,
+							'data-elementor-lightbox-slideshow' => count( $settings['premium_gallery_img_content'] ) > 1 ? $id : false,
 						)
 					);
 
