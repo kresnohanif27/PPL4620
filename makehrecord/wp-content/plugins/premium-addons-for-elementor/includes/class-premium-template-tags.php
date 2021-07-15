@@ -1059,6 +1059,10 @@ class Premium_Template_Tags {
 
 		$settings = self::$settings;
 
+		if ( 'yes' !== $settings['premium_blog_paging'] ) {
+			return;
+		}
+
 		$pages = self::$page_limit;
 
 		if ( ! empty( $settings['max_pages'] ) ) {
