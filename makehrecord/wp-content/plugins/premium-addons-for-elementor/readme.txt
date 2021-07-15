@@ -5,7 +5,7 @@ Donate Link: https://premiumaddons.com/?utm_source=wp-repo&utm_medium=link&utm_c
 Requires at least: 5.0
 Tested Up To: 5.7.2
 Requires PHP: 5.4
-Stable Tag: 4.4.0
+Stable Tag: 4.4.1
 License: GPL v3.0
 License URI: https://opensource.org/licenses/GPL-3.0
 
@@ -13,7 +13,7 @@ Premium Addons for Elementor plugin includes essential widgets and addons like B
 
 == Description ==
 
-Supercharge your [Elementor Page Builder](https://wordpress.org/plugins/elementor/) with 55+ highly customizable Elementor essential addons and widgets, 300+ premade Elementor templates that will give you the ability to build sophisticated websites in less time with no coding required. Both Elementor and Premium Addons plugins take your WordPress website to the next level.
+Supercharge your [Elementor Page Builder](https://wordpress.org/plugins/elementor/) with 55+ highly customizable Elementor essential addons and widgets, 330+ premade Elementor templates that will give you the ability to build sophisticated websites in less time with no coding required. Both Elementor and Premium Addons plugins take your WordPress website to the next level.
 
 [**Check Elementor Widgets & Addons Demo Pages**](https://premiumaddons.com/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme)
 
@@ -194,6 +194,11 @@ Premium Addons for Elementor is 100% Ads Free, Ads can only be detected from You
 14. Premium Progress Bar Widget for Elementor
 
 == Changelog ==
+
+= 4.4.1 =
+
+- Fixed: Lightbox navigation issue with videos in Media Grid widget.
+- Fixed: Blog pagination functions are called even pagination option is disabled.
 
 = 4.4.0 =
 
